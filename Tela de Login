@@ -1,1 +1,73 @@
+import 'package:flutter/material.dart';
 
+class Tela2 extends StatefulWidget {
+  const Tela2({super.key});
+
+  @override
+  State<Tela2> createState() => _Tela2State();
+}
+
+class _Tela2State extends State<Tela2> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        backgroundColor: const Color(0xFFF4F6FC),
+        body: ListView(
+          children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
+              'https://yata-apix-91ee931a-776c-41e7-b199-fef7a4d55e9e.s3-object.locaweb.com.br/4f964dbdd0b8449d9458c75fd81bf928.jpg',
+              height:100,
+            ),
+          ],
+
+          ),
+
+          Text(
+            'LOGIN',
+            style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Color(0xFFD3D3D3),
+
+            ),
+            textAlign: TextAlign.center,
+          ),
+
+
+
+        Expanded(
+    child: TextField(
+    decoration: InputDecoration(hintText: 'Nome:'),
+    ),
+
+    ),
+
+    SizedBox(height: 8),
+    Expanded(
+    child: TextField(
+    decoration: InputDecoration(
+    hintText: 'Senha: '
+    ),
+    ),
+    ),
+
+SizedBox(height:250),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Image.network(
+                  'https://yata-apix-91ee931a-776c-41e7-b199-fef7a4d55e9e.s3-object.locaweb.com.br/d0a19404feed411891783f7074946daf.jpg',
+                  height:250,
+                ),
+              ],
+            ),
+
+      ],
+    ),
+
+    );
+  }
+}
