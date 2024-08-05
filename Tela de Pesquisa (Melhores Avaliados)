@@ -1,0 +1,304 @@
+import 'package:flutter/material.dart';
+
+
+class Pesquisa extends StatefulWidget {
+ const Pesquisa({super.key});
+
+
+ @override
+ State<Pesquisa> createState() => _PesquisaState();
+}
+
+
+class _PesquisaState extends State<Pesquisa> {
+ @override
+ Widget build(BuildContext) {
+   return Scaffold(
+     backgroundColor: const Color(0xFFf4f6fc),
+     body: Column(
+       children: [
+         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+           Icon(
+             Icons.search,
+             size: 40,
+             color: Color(0xFF000000),
+           ),
+           Icon(
+             Icons.person,
+             size: 40,
+           ),
+         ]),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'O HOBBIT',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'J.R.R TOLKIEN',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 10,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               '30,00 R\$',
+               style: TextStyle(
+                 color: Colors.red,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+     Row(
+       mainAxisAlignment: MainAxisAlignment.start,
+       children: [
+       Icon(
+         Icons.star,
+         size: 12,
+       color: Color(0xFFD76A1A)
+       ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+
+
+     ]
+     ),
+
+
+         Row(
+           mainAxisAlignment: MainAxisAlignment.start,
+           children: [
+             Image.network(
+                 'https://m.media-amazon.com/images/I/91M9xPIf10L.AC_UF1000,1000_QL80.jpg',
+                 height: 140),
+           ],
+         ),
+
+
+         const SizedBox(height: 8),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.end,
+           children: [
+             ElevatedButton(
+               onPressed: () {},
+               child: const Text(
+                 'Adicionar ao carrinho',
+                 style: TextStyle(
+                   fontSize: 15,
+                   color: Colors.black,
+                   fontWeight: FontWeight.bold,
+                 ),
+               ),
+               style: ElevatedButton.styleFrom(
+                 backgroundColor: Color(0xFFd9d9d9),
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'A  PACIENTE SILENCIOSA',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'Alex Michaelides',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 10,
+               ),
+             ),
+           ],
+         ),
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               '27,00 R\$',
+               style: TextStyle(
+                 color: Colors.red,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+             mainAxisAlignment: MainAxisAlignment.start,
+             children: [
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+
+
+             ]
+         ),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.start,
+           children: [
+             Image.network(
+                 'https://m.media-amazon.com/images/I/41J3FApF8yL.jpg',
+                 height: 140),
+           ],
+         ),
+
+
+         const SizedBox(height: 8),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.end,
+           children: [
+             ElevatedButton(
+               onPressed: () {},
+               child: const Text(
+                 'Adicionar ao carrinho',
+                 style: TextStyle(
+                   fontSize: 15,
+                   color: Colors.black,
+                   fontWeight: FontWeight.bold,
+                 ),
+               ),
+               style: ElevatedButton.styleFrom(
+                 backgroundColor: Color(0xFFd9d9d9),
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'A BIBLIOTECA DA MEIA-NOITE',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'Matt Haig',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 10,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               '28,34 R\$',
+               style: TextStyle(
+                 color: Colors.red,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+       ],
+
+
+     ),
+   );
+ }
+}
