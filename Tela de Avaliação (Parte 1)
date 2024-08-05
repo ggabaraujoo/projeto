@@ -1,0 +1,89 @@
+import 'package:flutter/material.dart';
+
+
+class Avaliacao1 extends StatefulWidget {
+  const Avaliacao1({super.key});
+
+
+  @override
+  State<Avaliacao1> createState() => _Avaliacao1State();
+}
+
+
+class _Avaliacao1State extends State<Avaliacao1> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color (0xFFF4F6FC),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: GridView.count(
+          crossAxisCount: 3,
+          mainAxisSpacing: 30,
+          children: [
+            Image.network(
+              'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRVw8y6Es11C_iOMFGnTktS-qCPtlXRB8Tby6rASjl74Qv3Q3OCU9ThaxRPaon_9xK3vhCLrpMB0sMkOXWeaTvZ-ntEdlMgEHn80cHRVP1TGs4nZFtLOQtdTA&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQGCqGOt4-FX2WgzAI7V0tijwqnoTqVJuE_N8SMW-2t8SYz_ITH5yZEWrGRHdN2gFQ8raPnufqTmqa75TiqUyRYiQMaqgSq0YEPW0s0QOUp25UUdsCx2EE-&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://m.media-amazon.com/images/I/81PQNhm2shL.SY466.jpg',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQq0WagFSVjYlUBWpPRaxvFx0lENL_wa2JiFOQciXNjb7lKOSArr_i9J1eOhzMETRIoI7SGXo1RRj9GD_Gv4oaGva8Qm3VyNrZXl9FgMNgy&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRWcRchBJDK2FocxVqtJcWLM_h0TRzB8ZFv2C-0Wq-aPlnZoIsiZfA6Ikv950beNA4LaFlKcWgoMNQcJk220qwD3zHSTtferQTGpdvYmEIyaEdwoBysjWLaFA&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR9hzGDP2HSp1sHzHpLMU3XTkr6OWMRKSIerTBl6BeCmXISPniGnPOlZICsld-aVzEBf-suTiSIAnjiN7LyrASFdjYY3-jkTym3zJUj1LI&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTttZRcqw7bUXRXV30NtRvuVHMkTXlP_FaHKuWsdYxyc_dsPcWv6SAgZ-It6aBDq3bxKz7xZpWcvNNXDFLurZdEIBZ_2YFPkeWC3h50V_Ay9gHMODfTXOZxqg&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS5QKJKu-0vnK4dBuu2bHxFThBzxvIsJIwS9OnY8Ft5_f7TPz3ftbEg2Oy-tIuhxypkofCQWFhdUvINMqG1aB5hYj_J8P9W&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQN0J5cz8cAu2mM2Z3nuFdcB2TBBxOemiO2wvGdW3FyBrbTb2fnj2AlvSBpTo0yZ64XrLSAVFLKsL2NbfaC-dz6eV1Eo4ax6S45C_GBntT2X9mGOOeRTs9o&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRgqO56gwYTfo9I66hC_0WuhHE98bMoBpd_iQdW9TCljSA8LxaxflwY70c3ShWvt8SH9trnqtq276b6jHOiMGu_eR1wnowI81D2L9NqiiG8&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTwJykeK5RLnd0ZYn12XABH5teSFc5ss8_SLLjgr0193ShIhQMk1AEIPAUF2jl5WOTGXA-sunEVTTSkBKmc7PSCT9Q0ig-9KnRLMviydRvnJGWl_vscHwjKpA&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTxN3117j2pxgds4uq4e4SYUAG5tSPlwcFq5Wyl8h-6Stoh_7-sb-e6UmjHjbMLYoH7nBqdkE8s84yx9D7EcZncGWIN0xD2rr9d0xOE0YII&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQpvpdT9MNNOUVa5XpnbTIDGvYxU1ANQf9h_NGack1YZU867Am5fKcxeSmPaeiFxHiu6s5HEtnFHwx7k2rd-BHJhTLvfBFHXXgtGN5-WimIm1Fn94ZvmPDI&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRAPV4WC-v7Kj-79ZploEb3kCZdPM6hoiQ7utUkCtjHEjx1KsBSEbocthoQ995rwDej08frQAxgWKq-1SmDdIrI7Ldhd-VKmA&usqp=CAE',
+              height: 160,
+            ),
+            Image.network(
+              'https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR3hVOuJyCiW4sJoiE6-MoCFuJIHxaEBT2RLmVoNxJEfmVpF2binQAbaIBPdN2k7RRI_-mcZtbaeptukoE1ZDihLBGBPd6BfOicbi_-fDs&usqp=CAE',
+              height: 160,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
