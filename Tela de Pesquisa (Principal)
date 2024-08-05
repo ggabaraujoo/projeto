@@ -1,0 +1,345 @@
+import 'package:flutter/material.dart';
+
+
+class Pesquisa extends StatefulWidget {
+ const Pesquisa({super.key});
+
+
+ @override
+ State<Pesquisa> createState() => _PesquisaState();
+}
+
+
+class _PesquisaState extends State<Pesquisa> {
+ @override
+ Widget build(BuilContext) {
+   return Scaffold(
+     backgroundColor: const Color(0xFFf4f6fc),
+     body: Column(
+       children: [
+         Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+           Icon(
+             Icons.search,
+             size: 40,
+             color: Color(0xFF000000),
+           ),
+           Icon(
+             Icons.person,
+             size: 40,
+           ),
+         ]),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'MYSTICAL',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'El despertar de la magia',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 15,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'Marta Álvares e Laia Lopes',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 10,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               '220,90 R\$',
+               style: TextStyle(
+                 color: Colors.red,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+     Row(
+       mainAxisAlignment: MainAxisAlignment.start,
+       children: [
+       Icon(
+         Icons.star,
+         size: 12,
+       color: Color(0xFFD76A1A)
+       ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFD76A1A)
+         ),
+         Icon(
+             Icons.star,
+             size: 12,
+             color: Color(0xFFd9d9d9)
+         ),
+
+
+     ]
+     ),
+
+
+         Row(
+           mainAxisAlignment: MainAxisAlignment.start,
+           children: [
+             Image.network(
+                 'https://m.media-amazon.com/images/I/61sRtsP87hL.AC_UF1000,1000_QL80.jpg',
+                 height: 140),
+           ],
+         ),
+
+
+         const SizedBox(height: 8),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.end,
+           children: [
+             ElevatedButton(
+               onPressed: () {},
+               child: const Text(
+                 'Adicionar ao carrinho',
+                 style: TextStyle(
+                   fontSize: 15,
+                   color: Colors.black,
+                   fontWeight: FontWeight.bold,
+                 ),
+               ),
+               style: ElevatedButton.styleFrom(
+                 backgroundColor: Color(0xFFd9d9d9),
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'O POVO DO AR',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'O rei perverso',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 15,
+               ),
+             ),
+           ],
+         ),
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'Holly Black',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 10,
+               ),
+             ),
+           ],
+         ),
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               '30,00 R\$',
+               style: TextStyle(
+                 color: Colors.red,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+             mainAxisAlignment: MainAxisAlignment.start,
+             children: [
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+               Icon(
+                   Icons.star,
+                   size: 12,
+                   color: Color(0xFFD76A1A)
+               ),
+
+
+             ]
+         ),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.start,
+           children: [
+             Image.network(
+                 'https://m.media-amazon.com/images/I/91N9kjbqxWS.AC_UF1000,1000_QL80.jpg',
+                 height: 140),
+           ],
+         ),
+
+
+         const SizedBox(height: 8),
+         Row(
+           mainAxisAlignment: MainAxisAlignment.end,
+           children: [
+             ElevatedButton(
+               onPressed: () {},
+               child: const Text(
+                 'Adicionar ao carrinho',
+                 style: TextStyle(
+                   fontSize: 15,
+                   color: Colors.black,
+                   fontWeight: FontWeight.bold,
+                 ),
+               ),
+               style: ElevatedButton.styleFrom(
+                 backgroundColor: Color(0xFFd9d9d9),
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'O REINO SECRETO',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'A ilha das nuvens',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 15,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               'Rose Banks',
+               style: TextStyle(
+                 color: Colors.black,
+                 decoration: TextDecoration.none,
+                 fontSize: 10,
+               ),
+             ),
+           ],
+         ),
+
+
+         Row(
+           crossAxisAlignment: CrossAxisAlignment.start,
+           children: [
+             Text(
+               '10,00 R\$',
+               style: TextStyle(
+                 color: Colors.red,
+                 decoration: TextDecoration.none,
+                 fontSize: 20,
+               ),
+             ),
+           ],
+         ),
+
+
+       ],
+
+
+     ),
+   );
+ }
+}
