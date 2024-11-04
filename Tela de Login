@@ -1,73 +1,143 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:projeto/Projeto.dart';
 
-class Tela2 extends StatefulWidget {
-  const Tela2({super.key});
+class Tela2Page extends StatefulWidget {
+  const Tela2Page({super.key});
 
   @override
-  State<Tela2> createState() => _Tela2State();
+  State<Tela2Page> createState() => _Tela2PageState();
 }
 
-class _Tela2State extends State<Tela2> {
+
+class _Tela2PageState extends State<Tela2Page> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController senhaController = TextEditingController();
+
+  final GlobalKey<FormState> formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: const Color(0xFFF4F6FC),
-        body: ListView(
-          children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.network(
-              'https://yata-apix-91ee931a-776c-41e7-b199-fef7a4d55e9e.s3-object.locaweb.com.br/4f964dbdd0b8449d9458c75fd81bf928.jpg',
-              height:100,
-            ),
-          ],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0xffffffff),
+        body: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Form(
+              key: formKey,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  const SizedBox(height: 16),
+                  Text(
+                    'Entrar no BUKI BUKI',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.playfair(
+                      color: const Color(0xFF36885E),
+                      fontWeight: FontWeight.w600,
+                      fontSize: 24,
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+Image.network(
+                    'https://img1.wsimg.com/isteam/ip/230f38fa-d058-440d-b9c8-67b3429c2476/blob-f27724a.png/:/cr=t:21.88%25,l:0%25,w:100%25,h:56.25%25/rs=w:365,h:365,cg:true',
+                    height: 180,
+                  ),
+                  const SizedBox(height: 32),
+                  TextFormField(
+                    // autovalidateMode: AutovalidateMode.onUserInteraction,
+                    controller: emailController,
+                    validator: (value) {
+                      if (value!.contains("@")) {
+                        return null;
+                      } else {
+                        return "Você precisa digitar um e-mail válido!";
+                      }
+                    },
+                    decoration: buildInputDecoration('E-mail'),
+                    cursorColor: const Color(0xFF080809),
+                  ),
+                  const SizedBox(height: 16),
+                  TextFormField(
+                    obscureText: true,
+                    controller: senhaController,
+                    // autovalidateMode: AutovalidateMode.onUserInteraction,
+                    validator: (value) {
+                      if (value!.length >= 6) {
+                        return null;
+                      } else {
+                        return "Você precisa digitar uma senha válida!";
+                      }
+                    },
+                    decoration: buildInputDecoration('Senha'),
+                    cursorColor: const Color(0xFF10397B),
+                  ),
+                  const SizedBox(height: 32),
+                  // Spacer(),
+                  ElevatedButton(
+                    onPressed: () {
+                      // Validar o Form
+                      if (formKey.currentState!.validate()) {
+                        // Verificar e-mail e senha
+                        String email = emailController.text;
+                        String senha = senhaController.text;
 
-          ),
+                        if (email == 'mems11@aluno.ifal.edu.br' && senha == 'eduardaifal') {
+                          // Navegar p/ HomePage
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Projeto();
+                              },
+                            ),
+                          );
+                        } else {
+                          print('Usuário e/ou Senha incorreto(s)!');
+                        }
+                      }
 
-          Text(
-            'LOGIN',
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Color(0xFFD3D3D3),
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF646060),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Text(
+                        'Entrar com a conta BUKI BUKI',
+                        style: GoogleFonts.merriweather(
+                          fontSize: 19,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            )),
+      ),
+    );
+  }
 
-            ),
-            textAlign: TextAlign.center,
-          ),
-
-
-
-        Expanded(
-    child: TextField(
-    decoration: InputDecoration(hintText: 'Nome:'),
-    ),
-
-    ),
-
-    SizedBox(height: 8),
-    Expanded(
-    child: TextField(
-    decoration: InputDecoration(
-    hintText: 'Senha: '
-    ),
-    ),
-    ),
-
-SizedBox(height:250),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Image.network(
-                  'https://yata-apix-91ee931a-776c-41e7-b199-fef7a4d55e9e.s3-object.locaweb.com.br/d0a19404feed411891783f7074946daf.jpg',
-                  height:250,
-                ),
-              ],
-            ),
-
-      ],
-    ),
-
+  buildInputDecoration(String name) {
+    return InputDecoration(
+      label: Text(name),
+      floatingLabelStyle: GoogleFonts.playfair(
+          color: const Color(0xFF050505), fontWeight: FontWeight.w600),
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(10),
+        borderSide: const BorderSide(
+          width: 3,
+          color: Color(0xFF070707),
+        ),
+      ),
     );
   }
 }
